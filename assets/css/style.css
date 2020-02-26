@@ -801,8 +801,8 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-
   margin: 0;
+  font-size: 1.27rem;
 }
 
 .skill-item__link {
@@ -878,11 +878,11 @@ a {
 /* my code */
 /* my code */
 .skills__button {
-  margin: 20px auto 40px;
-  border: 1px rgba(45, 54, 81, 0.8) solid;
-  width: 360px;
+  margin: 20px auto 0px;
+  border: 2px #2d3651 solid;
+  width: 350px;
   height: 60px;
-  background-color: #637588;
+  background-color: rgba(45, 54, 81, 0.8);
   text-align: center;
   transition: 0.5s;
 }
@@ -890,8 +890,8 @@ a {
   display: block;
   width: 100%;
   height: 100%;
-  padding-top: 20px;
-  font-size: 18px;
+  padding-top: 17px;
+  font-size: 1.15rem;
   font-family: "Roboto", sans-serif;
 }
 .skills__button:hover {
@@ -903,10 +903,19 @@ a {
   padding: 100px 0;
 }
 .about h2 {
-  font-size: 40px;
+  font-size: 2.5rem;
+  margin: 0 0 56px;
+  letter-spacing: 0.1em;
 }
 .about p {
-  font-size: 17px;
+  font-size: 18px;
+  letter-spacing: 0.055em;
+}
+.about p:last-child {
+  margin-bottom: 0;
+}
+.about-img {
+  margin-top: 20px;
 }
 .about-grid {
   display: grid;
@@ -949,20 +958,27 @@ form {
   padding-left: 20px;
   transition: background-color 0.5s, border-color 0.5s;
   letter-spacing: 0.15em;
-  color: #ffffff;
+  color: #637588;
   border: 2px solid rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
   font-size: 1.125rem;
 }
+.form-item__input::-webkit-input-placeholder {
+  color: #637588;
+}
+.form-item__input::-moz-placeholder {
+  color: #637588;
+}
 form .btn-accent {
   color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.25);
   padding: 0;
   transition: 0.5s;
   cursor: pointer;
+  letter-spacing: 0.1em;
 }
 form .btn-accent:hover {
   background-color: #d66926;
@@ -975,7 +991,9 @@ form .btn-accent:hover {
 }
 .some-post h2 {
   font-size: 40px;
-  margin-bottom: 40px;
+  margin: 0 0 56px;
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
 }
 .some-grid {
   display: grid;
@@ -1024,18 +1042,19 @@ form .btn-accent:hover {
   margin: 0;
   padding: 0;
   height: 300px;
-  overflow: hidden;
+  object-fit: cover;
 }
 .some-grid__title {
   text-align: center;
   font-family: "Roboto Slab", serif;
-  font-size: 18px;
+  font-size: 1.17rem;
   letter-spacing: 0;
   margin: 40px 0;
+  padding: 0 20px;
 }
 .some-grid__discr {
   text-align: center;
-  padding: 0 25px;
+  padding: 0 25px 20px;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   letter-spacing: 0;
@@ -1045,6 +1064,11 @@ footer {
   margin: 100px auto 0;
   text-align: center;
 }
+footer .fab {
+  font-size: 36px;
+  color: #fff;
+  background-color: #2d3651;
+}
 footer ul {
   list-style-type: none;
   padding: 60px 0 30px;
@@ -1052,7 +1076,7 @@ footer ul {
 }
 footer ul li {
   display: inline-block;
-  margin: 0 4px 0;
+  margin: 0 6.5px 0;
 }
 footer ul::after {
   position: absolute;
@@ -1064,32 +1088,31 @@ footer ul::after {
   background-color: rgba(255, 255, 255, 0.1);
 }
 footer ul li a {
-  border: 1px solid #ffffff;
-  padding: 8px;
   border-radius: 5px;
   display: inline-block;
-  width: 35px;
-  height: 35px;
   background-color: #ffffff;
   color: #637588;
   font-weight: bold;
   transition: 0.5s;
 }
-footer ul li a:hover {
-  background-color: #d66926;
+.fab:hover {
+  color: #d66926;
+  transition: 0.5s;
 }
 .footer-text {
-  padding-bottom: 60px;
+  padding-bottom: 75px;
   margin-bottom: 0px;
   letter-spacing: 0.05em;
   color: #e5e5e5;
   font-weight: 700;
+  padding-top: 5px;
 }
 .footer-text span {
   letter-spacing: 0.33em;
   font-weight: 100;
   color: #637588;
   font-family: "Roboto", sans-serif;
+  margin-left: 10px;
 }
 
 /* end my code */
@@ -1127,7 +1150,7 @@ footer ul li a:hover {
 }
   .some-grid img {
     width: 100%;
-  }
+  } 
 }
  
 @media (max-width: 991.8px) {
@@ -1144,6 +1167,15 @@ footer ul li a:hover {
     "a7 a9 a9";
     grid-template-columns: repeat(3, 1fr);
   }
+  .some-post h2 {
+    font-size: 2rem;
+  }
+  .about h2 {
+    font-size: 2rem;
+  }
+  .myform {
+    margin-bottom: 50px;
+  }
 }
 
 
@@ -1158,7 +1190,7 @@ footer ul li a:hover {
     "p6 p6";
   }
   .skills {
-    padding-bottom: 0;
+    padding-bottom: 20px;
   }
   .header-menu {
     background-color: rgba(255, 255, 255, 0.1);
@@ -1221,6 +1253,17 @@ footer ul li a:hover {
   .about-border::after {
     display: none;
   } 
+  .some-post h2 {
+    font-size: 1.5rem;
+  }
+  .about h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  footer {
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1234,6 +1277,13 @@ footer ul li a:hover {
   .header-content__title {
     margin-bottom: 15px;
   }
+  .some-post h2 {
+    margin-bottom: 30px;
+  }
+  .myform {
+    margin-bottom: 30px;
+  }
+
 }
 
 @media (max-width: 500px) {
