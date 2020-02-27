@@ -908,7 +908,7 @@ a {
   letter-spacing: 0.1em;
 }
 .about p {
-  font-size: 18px;
+  font-size: 1.125em;
   letter-spacing: 0.055em;
 }
 .about p:last-child {
@@ -963,6 +963,11 @@ form {
   border-bottom-color: rgba(255, 255, 255, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
   font-size: 1.125rem;
+}
+.form-item__input:hover, .form-item__input:focus {
+  border-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: #ffffff;
 }
 .form-item__input::-webkit-input-placeholder {
   color: #637588;
@@ -1154,6 +1159,46 @@ footer ul li a {
 }
  
 @media (max-width: 991.8px) {
+  .header-content__buttons .btn {
+    width: 200px;
+    height: 50px;
+    padding: 14px 0;
+    font-size: 1rem;
+  }
+  .about {
+    padding: 80px 0 80px 0;
+  }
+  .about-grid {
+    grid-gap: 40px;
+  }
+  .about p {
+    font-size: 16px;
+    letter-spacing: 0.055em;
+  }
+  .about-border::after {
+    right: -20px;
+  }
+  /* .about p:first-of-type {
+    padding-top: 5px;
+  } */
+  .about h2 {
+    margin-bottom: 35px;
+  }
+  .about-img img{
+    max-height: 480px;
+  }
+  form {
+    padding: 0 20px;
+  }
+  .myform {
+    margin-bottom: 80px;
+  }
+  form .btn-accent {
+    font-size: 1.125em;
+  }
+  .some-grid {
+    grid-gap: 20px;
+  }
   .header-content__title {
     margin: 0 0 43px;
 
@@ -1169,17 +1214,39 @@ footer ul li a {
   }
   .some-post h2 {
     font-size: 2rem;
+    margin-bottom: 42px;
   }
   .about h2 {
     font-size: 2rem;
   }
-  .myform {
-    margin-bottom: 50px;
+  .some-grid__title {
+    font-size: 1.125em;
+    letter-spacing: 0.05em;
+    font-family: "Roboto Slab", serif;
+  }
+  footer {
+    margin-top: 80px;
+  }
+  footer ul {
+    margin: 0;
   }
 }
 
 
 @media (max-width: 768px) {
+  .header-content__buttons .btn {
+    width: 170px;
+    height: 40px;
+    padding: 8px 0;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+  }
+  .skill-item__title {
+    font-size: 1.125rem;
+  }
+  .skills {
+    padding-bottom: 40px;
+  }
   .some-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
@@ -1188,9 +1255,6 @@ footer ul li a {
     "p2 p3" 
     "p4 p5"
     "p6 p6";
-  }
-  .skills {
-    padding-bottom: 20px;
   }
   .header-menu {
     background-color: rgba(255, 255, 255, 0.1);
@@ -1227,6 +1291,9 @@ footer ul li a {
     "f1 f2"
     "f3 f3";
   }
+  .myform {
+    margin-bottom: 60px;
+  }
   button.btn-accent {
     padding: 20px 0;
   }
@@ -1241,7 +1308,7 @@ footer ul li a {
     "a8 a9";
   }
   .about {
-    padding: 20px 0 0;
+    padding: 40px 0 0;
   }
   .about-grid {
     grid-template-columns: 1fr;
@@ -1262,7 +1329,7 @@ footer ul li a {
     text-align: center;
   }
   footer {
-    margin-top: 40px;
+    margin-top: 60px;
   }
 }
 
@@ -1275,15 +1342,30 @@ footer ul li a {
     margin: 10px 0;
   }
   .header-content__title {
-    margin-bottom: 15px;
+    margin-bottom: 38px;
   }
   .some-post h2 {
     margin-bottom: 30px;
+    text-align: center;
   }
   .myform {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
-
+  .skills {
+    padding: 20px;
+  }
+  .skills__container {
+    grid-gap: 20px;
+  }
+  .skills__button {
+    width: 100%;
+  }
+  .about {
+    padding: 60px 0;
+  }
+  .some-grid {
+    grid-gap: 20px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1313,12 +1395,11 @@ footer ul li a {
     "a8"
     "a9";
   }
-  .skills__button {
-    width: 100%;
-  }
   form {
     grid-template-columns: 1fr;
     grid-template-areas:"f1" "f2" "f3";
   }
+  .some-post .skills__button {
+    margin-top: -40px;
+  }
 }
-
